@@ -2,9 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' />
     <title>My test page</title>
   </head>
   <body>
     <h1>すごい地図</h1>
+    <div id='map' style='width: 400px; height: 300px;'></div>
   </body>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2F0b21peHgiLCJhIjoiY2tiYWJhcTFnMG1tODJ1bWVxd3JqMzQ3OCJ9.wWGSjjRw7mkfEsoacdiDOQ';
+    var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11'
+    });
+  </script>
 </html>
